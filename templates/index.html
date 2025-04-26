@@ -165,7 +165,7 @@
     <div class="content">
         <!-- Form at the top -->
         <form method="POST" class="form-container">
-            <textarea name="message" placeholder="Type your message here..."></textarea>
+            <textarea name="message" placeholder="Type your message here...">{{ request.form['message'] if request.form.get('message') else '' }}</textarea>
             <div>
                 <button type="submit" name="action" value="encrypt">Encrypt</button>
                 <button type="submit" name="action" value="decrypt">Decrypt</button>
